@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <div id="header">
+
+    <h1>TIC TAC TOE</h1>
+
+    <h2 id="whosturn"></h2>
+
+  </div>
+
+  <div id="firstframe">
+
+      <h4>Who's playing?</h4>
+
+      <div style="width:100%" id="names">
+        <div><input id="p1" type="text" value="Player 1"></div>
+        <div><input id="p2" type="text" value="Player 2"></div>
+      </div>
+
+      <h3>Pick your poison:</h3>
+
+      <div style="width:100%" id="poison">
+        <div class="pic 1" id="tictac"><img src="tictac.png" alt=""></div>
+        <div class="pic 2" id="toes"><img src="toes.png" alt=""></div>
+        <div class="pic 3" id="cross"><img src="cross.png" alt=""></div>
+        <div class="pic 4" id="nought"><img src="nought.png" alt=""></div>
+      </div>
+
+      <div id="startgame">
+        <button id="startbtn">Start game</button>
+      </div>
+
+  </div>
+
+    <div style="margin: auto" id="game" class="gamebox">
+    </div>
+
+    <div style="margin: auto" id="results">
+      <div id="playagain"><button id="playagainbtn">Play again</button></div>
+      <h2 id="showWinner"></h2>
+      <h3 id="winTally"></h3>
+    </div>
+
+
+  <script src="jquery.js"></script>
+  <script src="underscore.js"></script>
+  <script src="code.js"></script>
+
+</body>
+
+
+</html>

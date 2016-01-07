@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+#game {margin: 20px; min-width:300px; max-width: 100%; border-style: solid; border-color: black; border-width: 5px; text-align: center}
+
+#game div {display: inline-block; width: 25vw; min-width: 84px; min-height: 84px; height: 25vw; background-color: orange; border-style: solid; border-width: 3px; border-color: white}
+
+#game div img {max-width: 100%}
+
+#names div {display: inline-block; text-align: center}
+
+#names {text-align: center}
+
+#poison {margin: 20px; text-align: center}
+
+#poison div {display: inline-block; text-align: center; max-width: 20%}
+
+#poison div img {width: 100%}
+
+#startgame {text-align: center}
+
+#playagain {text-align: center; visibility: hidden}
+
+body {min-width: 300px}
+
+button {text-align: center}
+
+h1 {text-align: center}
+
+h2 {text-align: center}
+
+h3 {text-align: center}
+
+h4 {text-align: center}
