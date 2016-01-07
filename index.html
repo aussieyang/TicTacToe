@@ -12,11 +12,12 @@
 
   <div id="header">
 
-    <h1>TIC TAC TOE</h1>
-
-    <h2 id="whosturn"></h2>
+    <div><img src="logo.gif" class="left logo" alt=""></div>
+    <div><h1 class="top title">TIC TAC TOE</h1></div>
+    <div><img src="logo.gif" class="right logo" alt="" style="visibility: hidden"></div>
 
   </div>
+
 
   <div id="firstframe">
 
@@ -42,7 +43,21 @@
 
   </div>
 
-    <div style="margin: auto" id="game" class="gamebox">
+
+  <div id="gamepage">
+
+    <h2 id="whosturn"></h2>
+
+    <div id="gameboard">
+      <div id="gameboy1">
+        <img src="win.gif" id="gameboyimg1" alt="">
+        <p>WINNER</p>
+      </div>
+      <div style="margin: auto" id="game" class="gamebox"></div>
+      <div id="gameboy2">
+        <img src="win.gif" id="gameboyimg2" alt="">
+        <p>WINNER</p>
+      </div>
     </div>
 
     <div style="margin: auto" id="results">
@@ -50,6 +65,8 @@
       <h2 id="showWinner"></h2>
       <h3 id="winTally"></h3>
     </div>
+
+  </div>
 
 
   <script src="jquery.js"></script>

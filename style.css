@@ -1,35 +1,142 @@
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+
 * {
   box-sizing: border-box;
 }
 
-#game {margin: 20px; min-width:300px; max-width: 100%; border-style: solid; border-color: black; border-width: 5px; text-align: center}
+#header {display: flex;
+  justify-content: space-around;
+  background-color: grey;
+  font-family: 'Permanent Marker', 'cursive';
+  font-size: 1.5em;
+  color: white;
+  text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;}
 
-#game div {display: inline-block; width: 25vw; min-width: 84px; min-height: 84px; height: 25vw; background-color: orange; border-style: solid; border-width: 3px; border-color: white}
+#header div {flex-grow: 1}
 
-#game div img {max-width: 100%}
+#header .logo {padding-left: 16px;
+  padding-top: 20px;
+  cursor: pointer;}
 
-#names div {display: inline-block; text-align: center}
+#names {text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;}
 
-#names {text-align: center}
+#names div {display: flex;
+  text-align: center;
+  padding: 5px;
+  padding-left: 90px;
+  padding-right: 90px;
+  }
 
-#poison {margin: 20px; text-align: center}
+#names input {height: 45px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Permanent Marker', 'cursive';
+  font-size: 1em;}
 
-#poison div {display: inline-block; text-align: center; max-width: 20%}
+#poison {margin: 20px;
+  text-align: center}
 
-#poison div img {width: 100%}
+#poison div {display: inline-block;
+  text-align: center;
+  max-width: 20%}
 
-#startgame {text-align: center}
+#poison div img {width: 100%;
+  cursor: pointer;}
 
-#playagain {text-align: center; visibility: hidden}
+#startgame {text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;}
 
-body {min-width: 300px}
+#startbtn {text-align: center;
+  height:45px;
+  width: 150px;
+  font-family: 'Permanent Marker', 'cursive';
+  font-size: 1em;
+  cursor: pointer;}
+
+#gameboard {display: none;}
+
+#gameboy1 {visibility: hidden;
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;}
+
+#gameboy2 {visibility: hidden;
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;}
+
+#game {display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  min-width:300px;
+  max-width: 100%;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  text-align: center}
+
+#game div {display: flex;
+  align-content: center;
+  flex-grow: 1;
+  width: 30%;
+  min-width: 84px;
+  min-height: 97px;
+  background-color: orange;
+  border-style: solid;
+  border-width: 3px;
+  border-color: white}
+
+#game div img {flex-grow: 1;
+  max-width: 100%}
+
+#playagain {text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  visibility: hidden}
+
+#playagainbtn {text-align: center;
+  height:45px;
+  width: 150px;
+  font-family: 'Permanent Marker', 'cursive';
+  font-size: 1em;
+  cursor: pointer;}
+
+#winTally {text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;}
+
+body {min-width: 300px;
+  background-image: url("background.jpg");}
 
 button {text-align: center}
 
 h1 {text-align: center}
 
-h2 {text-align: center}
+h2 {text-align: center;
+  font-family: 'Permanent Marker', 'cursive';
+  font-size: 1.5em;}
 
-h3 {text-align: center}
+h3 {text-align: center;
+  font-family: 'Permanent Marker', 'cursive';
+  font-size: 1.5em;}
 
-h4 {text-align: center}
+h4 {text-align: center;
+  font-family: 'Permanent Marker', 'cursive';
+  font-size: 1.5em;}
+
+p {text-align: center;
+  font-family: 'Permanent Marker', 'cursive';
+  font-size: 2vw;}
+
+@media (max-width: 600px) {
+  h1 {font-size: 1.15em;}
+  #winTally {font-size: 1em;}
+}
+
+@media (max-width: 915px) {
+  #names div {padding-left: 30px;
+    padding-right: 30px;}
+  #gameboy1 {min-width: 14vw;}
+  #gameboy2 {min-width: 14vw;}
+  #gameboyimg1 {display: none}
+  #gameboyimg2 {display: none}
+}
