@@ -11,4 +11,4 @@ Insert the two player names, choose your marker, and start the game. Select a bo
 The project was built with Javascript, using Jquery for DOM manipulation and some Underscore.js inside the logic. The winner is calculated by generating an array of numbers with unique 9-bit values and iterating through them to find a winning combination.
 
 ## POSSIBLE FUTURE FEATURES ##
-It would be great to add sound effects to the click events using the DOM. Also, a footer would be a visual bonus.
+It would be great to add a single player version using a weighted choice AI between pure random choice and pure winning logic.

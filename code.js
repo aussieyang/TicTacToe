@@ -1,6 +1,17 @@
 //Handles on reactive page elements
 var $board = $("#game");
 
+//Click sounds
+var playSound1 = function() {
+  var sound1 = new Audio("sound1.mp3");
+  sound1.play();
+}
+
+var playSound2 = function() {
+  var sound2 = new Audio("sound2.mp3");
+  sound2.play();
+}
+
 //How many wins
 var p1Win = 0;
 var p2Win = 0;
@@ -15,7 +26,7 @@ var nameArray = [];
 var p1Total = 0;
 var p2Total = 0;
 
-//Keeping track of selected boxes and winning numbers to parse through to chekc for winner
+//Keeping track of selected boxes and winning numbers to parse through to check for winner
 var boardData = [];
 var winner = [7,56,73,84,146,273,292,448];
 
@@ -42,21 +53,25 @@ var picSelect = function() {
       player2 = "toes.png";
       $("#poison > div").css({"border-style":"none"});
       $(this).css({"border-style":"dotted", "border-color":"orange"});
+      playSound1();
     } else if($(this).attr("id")==="toes") {
       player1 = "toes.png";
       player2 = "tictac.png";
       $("#poison > div").css({"border-style":"none"});
       $(this).css({"border-style":"dotted", "border-color":"orange"});
+      playSound1();
     } else if($(this).attr("id")==="cross") {
       player1 = "cross.png";
       player2 = "nought.png";
       $("#poison > div").css({"border-style":"none"});
       $(this).css({"border-style":"dotted", "border-color":"orange"});
+      playSound1();
     } else if($(this).attr("id")==="nought") {
       player1 = "nought.png";
       player2 = "cross.png";
       $("#poison > div").css({"border-style":"none"});
       $(this).css({"border-style":"dotted", "border-color":"orange"});
+      playSound1();
     }
   })
 }
@@ -112,6 +127,7 @@ $("#startbtn").on("click", function() {
   nameArray.push($("#p2").val());
   $("#whosturn").append(nameArray[0]+"'s turn");
   $("#firstframe").css({"display":"none"});
+  playSound2();
 })
 
 
@@ -124,6 +140,7 @@ $("#playagainbtn").on("click", function() {
   $("#gameboy1").css({"visibility":"hidden"});
   $("#gameboy2").css({"visibility":"hidden"});
   $("#showWinner").empty();
+  playSound2();
 })
 
 
@@ -200,6 +217,7 @@ var playerMove = function() {
     currentPlayer = "p2";
     $("#whosturn").empty()
     $("#whosturn").append(nameArray[1]+"'s turn")
+    playSound1();
   } else if (currentPlayer === "p2") {
     //Changes boardData value to "player2"
     boardData.splice(indexBoxValue, 1, "player2");
@@ -223,6 +241,7 @@ var playerMove = function() {
     currentPlayer = "p1";
     $("#whosturn").empty()
     $("#whosturn").append(nameArray[0]+"'s turn")
+    playSound1();
   }
 }
 
