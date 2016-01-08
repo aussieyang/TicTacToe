@@ -105,7 +105,8 @@
 #winTally {text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;}
 
 #footer {background-color: grey;
-  padding-top: 3px; width:100%;}
+  padding-top: 3px;
+  width:100%;}
 
 #footer p {font-size: 0.8em;
   text-align: right;
@@ -113,6 +114,7 @@
   padding-bottom: 10px;}
 
 #footer p a {color: black; text-decoration: none}
+
 
 body {min-width: 300px;
   background-image: url("background.jpg");}
@@ -149,4 +151,9 @@ p {text-align: center;
   #gameboy2 {min-width: 14vw;}
   #gameboyimg1 {display: none}
   #gameboyimg2 {display: none}
+}
+
+@media screen and (orientation:portrait) {
+  #footer {position:absolute;
+  bottom:0;}
 }
